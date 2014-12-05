@@ -35,6 +35,7 @@ USER app
 
 RUN mkdir -p /home/app/syncserver
 ADD ./ /home/app/syncserver
+RUN ln -sf /data/syncserver.ini /home/app/syncserver/
 WORKDIR /home/app/syncserver
 
 RUN make build
